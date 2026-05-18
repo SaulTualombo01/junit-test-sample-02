@@ -13,17 +13,19 @@ import lombok.Data;
 @Builder(toBuilder = true)      //Genera un constructor con el patrón builder, permitiendo crear objetos de manera fluida y flexible
 @AllArgsConstructor       //Genera un constructor con todos los campos como parámetros
 @Entity
-@Table(name = "cakes")
-public class Cake {
-    
-    public Cake() {
+@Table(name = "customers")
+public class Customer {
+
+    public Customer() {
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    private String title;
+    private String name;
 
-    private String description;
+    private String mobileNumber;
+
+    private String type;
 }
